@@ -3,6 +3,17 @@ var start_time = 0;
 var end_time = 0;
 var userID;
 
+// $(function () {
+//     $('[data-toggle="popover"]').popover()
+//   })
+
+// $(function () {
+//     $('#popUp').popover({
+//        "left": "30%"
+//     })
+//     $(this).css("left", "30%")
+//   })
+
 $("#register").on("click", function () {
     var user = {
         name: $("").val().trim(),
