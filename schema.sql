@@ -1,0 +1,6 @@
+
+DROP DATABASE IF EXISTS badBoys;
+
+CREATE DATABASE badBoys;
+USE badBoys;
+
