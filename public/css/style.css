@@ -44,3 +44,17 @@ background: linear-gradient(to bottom right, rgb(7, 117, 190), rgb(56, 207, 245)
       width: 25%;
       height: 50%;
   }
+.scenarioBG{
+    position: relative;
+    background-image: url("./../../images/scenarios/house/house.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+#img{
+    position:absolute;
+    top: 50%;
+    left: 80%;
+}
