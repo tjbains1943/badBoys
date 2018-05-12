@@ -4,12 +4,12 @@ html, body {
 }
 
 #adminImg {
-    background-image: url("./../../images/admin2.jpg");
+    background-image: url("./../../images/assets/admin2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 #secondImg {
-    background-image: url("./../../images/flag1.jpg");
+    background-image: url("./../../images/assets/flag1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -18,7 +18,7 @@ html, body {
     margin-top: 10%;
 }
 #mainImg {
-    background-image: url("./../../images/back3.jpg");
+    background-image: url("./../../images/assets/back3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
