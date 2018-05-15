@@ -18,6 +18,7 @@
   "homepage": "https://github.com/tjbains1943/badBoys#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "masonry-layout": "^4.2.1",
     "mysql": "^2.15.0",
