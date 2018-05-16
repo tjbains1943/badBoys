@@ -1,21 +1,21 @@
 var path = require("path");
 
 
-module.exports = function(app) {
+module.exports = function (app) {
 
-  app.get("/", function(req, res) {
+  app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  app.get("/scenario", function(req, res) {
+  app.get("/scenario", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/scenario.html"));
   });
-  app.get("/news", function(req, res) {
+  app.get("/news", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/news.html"));
   });
   // If no matching route is found default to home
-  app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-  });
- 
+  // app.get("*", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/index.html"));
+  // });
+
 };
