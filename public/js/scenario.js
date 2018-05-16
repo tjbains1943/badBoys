@@ -6,21 +6,19 @@ var userName;
 var classID;
 var scenarioNum = 1;
 var backgroundNum = 2;
+var shoot = false;
+var timer;
+var armed;
+var title;
 
-<<<<<<< HEAD
 $("#register").on("click", function (event) {
     event.preventDefault();
-=======
-    $('.modal').modal("show")
-
-$("#register").on("click", function () {
->>>>>>> 437b2626a606b86484e6bf4827ae7fb19ce75703
     var user = {
         userName: $("#registerUser").val().trim(),
         password: $("#registerPassword").val().trim(),
         classID: $("#registerClass").val().trim()
     }
-    $.post("/user", user, ).then(function (data) {
+    $.post("/user", user).then(function (data) {
         userName = data.userName;
         userID = data.id;
         classID = data.classID;
@@ -35,7 +33,7 @@ $("#login").on("click", function (event) {
     }
     console.log(user.userName);
     console.log(user.password);
-    $.get("/login", user).then(function (data) {
+    $.post("/login", user).then(function (data) {
         if (data) {
             console.log(data);
             userName = data.userName;
@@ -47,14 +45,14 @@ $("#login").on("click", function (event) {
     });
 });
 
-$(".scenarioBG").on("click", function (event) {
+$("#start").on("click", function (event) {
+    $("#start").hide();
     console.log("session started");
     sessionStart = true;
     event.preventDefault();
-    $("#textBG").hide();
 
     $('.scenarioBG').css('background-image', 'url(../images/scenarios/house/house.jpg)');
-    var timer = setInterval(displayScenario, 8000);
+    timer = setInterval(displayScenario, 8000);
 
 });
 
@@ -63,7 +61,11 @@ function displayScenario() {
         xLocation = Math.floor(Math.random() * 80);
         yLocation = Math.floor(Math.random() * 50);
 
+        armed = data.armed;
+        title = data.title;
+
         start_time = new Date();
+
         var div = $("<div>");
         var img = $('<img>');
         img.attr("src", data.scenarioIMG);
@@ -72,7 +74,7 @@ function displayScenario() {
         div.css("left", xLocation + "%");
         div.css("top", yLocation + "%");
         var btn = $("<button>");
-        btn.addClass("btn btn-danger btn-block");
+        btn.addClass("btn btn-danger btn-block shoot");
         btn.text("Shoot");
         div.append(img);
         div.append(btn);
@@ -86,8 +88,27 @@ function displayScenario() {
     setTimeout(removeScenario, 3000);
     setTimeout(changeBackground, 4000);
 }
+$(document).on("click", ".shoot", function (event) {
+    event.preventDefault();
+    $(".scenarioBG").empty();
+    console.log("shoot");
+
+    var stats = {
+        title: title,
+        armedWith: armed,
+        shot: true,
+        time: 6,
+        UserId: userID
+    }
+    $.post("/stats", stats).then(function (data) {
+        console.log(data);
+    });
+});
 function removeScenario() {
     $(".scenarioBG").empty();
+    if (shoot === false) {
+
+    }
 }
 function changeBackground() {
     $.get("/scenarios/" + backgroundNum, function (data) {

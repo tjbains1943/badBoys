@@ -19,7 +19,7 @@ module.exports = function (app) {
         });
     });
 
-    app.get("/login", function (req, res) {
+    app.post("/login", function (req, res) {
         console.log(req.body);
         db.Users.findOne({
             where: {
@@ -27,6 +27,12 @@ module.exports = function (app) {
                 password: req.body.password
             }
         }).then(function (data) {
+            res.json(data);
+        });
+    });
+
+    app.post("/stats", function (req, res) {
+        db.ScenarioStats.create(req.body).then(function (data) {
             res.json(data);
         });
     });
