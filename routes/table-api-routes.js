@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function (app) {
 
     app.get("/scenarios/:id", function (req, res) {
-
+        console.log("lkjljkljljlkjlkjlkjlkjlkj")
         db.Scenarios.findOne({
             where: {
                 id: req.params.id
@@ -14,6 +14,7 @@ module.exports = function (app) {
     });
 
     app.post("/user", function (req, res) {
+        console.log(req.body)
         db.Users.create(req.body).then(function (data) {
             res.json(data);
         });

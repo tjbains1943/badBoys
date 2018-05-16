@@ -25,22 +25,6 @@ module.exports = function (app) {
 
 module.exports = function (app) {
 
-    // GET route for getting all of the posts
-    // app.get("/api/Scenarios", function (req, res) {
-    //     var query = {};
-    //     if (req.query.SId) {
-    //         query.SId = req.query.SId;
-    //     }
-    //     // Here we add an "include" property to our options in our findAll query
-    //     // We set the value to an array of the models we want to include in a left outer join
-    //     // In this case, just db.Author
-    //     db.Scenario.findAll({
-    //         where: query,
-    //         include: [db.User]
-    //     }).then(function (dbScenario) {
-    //         res.json(dbScenario);
-    //     });
-    // });
 
     app.get("/scenarios/:id", function (req, res) {
 
@@ -53,52 +37,42 @@ module.exports = function (app) {
         });
     });
 
-    /*
-        // Get route for retrieving a single post
-        app.get("/api/posts/:id", function (req, res) {
-            // Here we add an "include" property to our options in our findOne query
-            // We set the value to an array of the models we want to include in a left outer join
-            // In this case, just db.Author
-            db.Post.findOne({
-                where: {
-                    id: req.params.id
-                },
-                include: [db.Author]
-            }).then(function (dbPost) {
-                res.json(dbPost);
-            });
+
+
+
+
+    // POST route for saving a new scenarios
+    app.post("/scenarios/stats", function (req, res) {
+        db.Scenarios.create(req.body).then(function (dbStats) {
+            res.json(dbStats);
         });
-    
-        // POST route for saving a new post
-        app.post("/api/posts", function (req, res) {
-            db.Post.create(req.body).then(function (dbPost) {
-                res.json(dbPost);
-            });
+    });
+
+
+    // DELETE route for deleting scenarios
+    app.delete("/scenarios/stats", function (req, res) {
+        db.Scenarios.destroy({
+            where: {
+                id: req.body.id
+            }
+        }).then(function (dbStats) {
+            res.json(dbStats);
         });
-    
-        // DELETE route for deleting posts
-        app.delete("/api/posts/:id", function (req, res) {
-            db.Post.destroy({
+    });
+
+
+    // PUT route for updating scenarios
+    app.put("/scenarios/stats", function (req, res) {
+        db.Scenarios.update(
+            req.body,
+            {
                 where: {
-                    id: req.params.id
+                    id: req.body.id
                 }
-            }).then(function (dbPost) {
-                res.json(dbPost);
+            }).then(function (dbStats) {
+                res.json(dbStats);
             });
-        });
-    
-        // PUT route for updating posts
-        app.put("/api/posts", function (req, res) {
-            db.Post.update(
-                req.body,
-                {
-                    where: {
-                        id: req.body.id
-                    }
-                }).then(function (dbPost) {
-                    res.json(dbPost);
-                });
-        });
-        */
+    });
+
 };
 
