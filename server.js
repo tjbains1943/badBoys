@@ -1,18 +1,10 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> e42db97b00aea0d0ec777243d70da13756a9490c
 // *****************************************************************************
 // Server.js - This file is the initial starting point for the Node/Express server.
 //
 // ******************************************************************************
 // *** Dependencies
 // =============================================================
-<<<<<<< HEAD
 require('dotenv').config()
-=======
-require("dotenv").config();
->>>>>>> e42db97b00aea0d0ec777243d70da13756a9490c
 var express = require("express");
 var bodyParser = require("body-parser");
 var db = require("./models");
@@ -34,17 +26,11 @@ require("./routes/htmlRoutes.js")(app);
 require("./routes/apiRoutes.js")(app);
 // Note: separated into separate table files
 require("./routes/table-api-routes.js")(app);
-<<<<<<< HEAD
 // require("./routes/ScenariosTblRoute.js")(app);
 // require("./routes/UserTblRoute.js")(app);
-=======
-require("./routes/ScenariosTblRoute.js")(app);
-require("./routes/UserTblRoute.js")(app);
->>>>>>> e42db97b00aea0d0ec777243d70da13756a9490c
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-<<<<<<< HEAD
 db.sequelize.sync({
   force: true,
   logging: console.log
@@ -112,56 +98,6 @@ db.sequelize.sync({
       armed: "gun"
     }
   ]);
-=======
-db.sequelize
-  .sync({
-    force: true,
-    logging: console.log,
-  })
-  .then(function() {
-    db.Scenarios.bulkCreate([
-      {
-        scenarioBG: "../images/scenarios/house/house.jpg",
-        scenarioIMG: ["../images/scenarios/house/burgYellow.jpg"],
-      },
-      {
-        scenarioBG: "../images/scenarios/mall/mall.jpg",
-        scenarioIMG: ["../images/scenarios/mall/activeShooter.jpg"],
-      },
-      {
-        scenarioBG: "../images/scenarios/store/store.jpg",
-        scenarioIMG: ["../images/scenarios/store/robber.jpg"],
-      },
-      {
-        scenarioBG: "../images/scenarios/car/carStop.jpg",
-        scenarioIMG: ["../images/scenarios/car/car2.jpg"],
-      },
-      {
-        scenarioBG: "../images/scenarios/park/park.jpg",
-        scenarioIMG: ["../images/scenarios/park/guywbat.jpg"],
-      },
-      {
-        scenarioBG: "../images/scenarios/street/street.jpg",
-        scenarioIMG: ["../images/scenarios/street/gang.jpg"],
-      },
-      {
-        scenarioBG: "../images/scenarios/house/house.jpg",
-        scenarioIMG: ["../images/scenarios/house/guntohead.jpg"],
-      },
-      {
-        scenarioBG: "../images/scenarios/mall/mall.jpg",
-        scenarioIMG: ["../images/scenarios/mall/gunescalater.jpg"],
-      },
-      {
-        scenarioBG: "../images/scenarios/school/school.jpg",
-        scenarioIMG: ["../images/scenarios/school/kidhostage.jpg"],
-      },
-      {
-        scenarioBG: "../images/scenarios/park/park.jpg",
-        scenarioIMG: ["../images/scenarios/park/cop.jpg"],
-      },
-    ]);
->>>>>>> e42db97b00aea0d0ec777243d70da13756a9490c
 
     app.listen(PORT, function() {
       console.log("App listening on PORT " + PORT);
