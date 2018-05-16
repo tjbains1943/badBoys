@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // *****************************************************************************
 // Server.js - This file is the initial starting point for the Node/Express server.
@@ -5,19 +6,15 @@
 // ******************************************************************************
 // *** Dependencies
 // =============================================================
+=======
+>>>>>>> 7a3ebac8173af795adf1c5cb9b64ada15510d3af
 require('dotenv').config()
 var express = require("express");
 var bodyParser = require("body-parser");
-
-// Sets up the Express App
-// =============================================================
+var db = require("./models");
+// Requiring our models for syncing
 var app = express();
 var PORT = process.env.PORT || 8080;
-
-// Requiring our models for syncing
-var db = require("./models");
-
-// Sets up the Express app to handle data parsing
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,7 +28,11 @@ app.use(express.static("public"));
 // =============================================================
 require("./routes/htmlRoutes.js")(app);
 require("./routes/apiRoutes.js")(app);
-require("./routes/table-api-routes.js")(app);
+// Note: separated into separate table files
+// require("./routes/table-api-routes.js")(app);
+require("./routes/ScenariosTblRoute.js")(app);
+require("./routes/UserTblRoute.js")(app);
+
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
