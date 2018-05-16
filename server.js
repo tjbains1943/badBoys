@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // *****************************************************************************
 // Server.js - This file is the initial starting point for the Node/Express server.
@@ -5,6 +6,9 @@
 // ******************************************************************************
 // *** Dependencies
 // =============================================================
+=======
+require('dotenv').config()
+>>>>>>> 56a6c7c7b4d6ab0facec9c102a8d90d25792b03b
 var express = require("express");
 var bodyParser = require("body-parser");
 

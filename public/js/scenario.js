@@ -17,6 +17,8 @@ var backgroundNum = 2;
 //     $(this).css("left", "30%")
 //   })
 
+    $('.modal').modal("show")
+
 $("#register").on("click", function () {
     var user = {
         name: $("").val().trim(),

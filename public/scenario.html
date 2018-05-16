@@ -12,20 +12,142 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
 <body>
 
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" id="davisImg">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Register New User</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-0">
+                    <form class="border-0">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="">Username</label>
+                            <input type="email" class="form-control w-75" aria-describedby="emailHelp" placeholder="Enter username">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" class="">Password</label>
+                            <input type="password" class="form-control w-75 mb-4" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" class="">
+                                <strong> Class ID</strong>
+                            </label>
+                            <input type="password" class="form-control mb-4 w-100" placeholder="Enter Class ID from instructor here">
+                        </div>
+                        <button type="submit" class=" mt-2 btn btn-dark btn-block text-white">Log In</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-none text-primary" id="gradient">
+        <a class="navbar-brand navbar-right pr-4 text-white" href="#">
+            <strong> Officer Involved Scenarios</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="/">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    <li class="nav-item active">
+                        <a class="nav-link text-white">|
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/scenario">Scenarios</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-white">|
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/news.html">In the News</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-white">|
+                            <span class="sr-only">(current)</span>
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./crime.html">FBI Crime Statistics</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-white">|
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Login</a>
+                        <div class="dropdown-menu">
+                            <form class="my-2 p-3 col-md-6" id="mxWidth">
+                                <div class="form-group">
+                                    <h5 id="emailHelp" style="display: inline;" class="form-text text-white mb-5">Log in or</h5>
+                                    <a class="nav-link text-white" style="display: inline;" href="/scenario">
+                                        <u> Create New Account</u>
+                                    </a>
+                                    <i id="xbtn" class="float-right fas fa-times"></i>
+                                    <h5 id="emailHelp" class="form-text text-white mb-5"></h5>
+                                    <label for="exampleInputEmail1" class="text-white">Username</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1" class="text-white">Password</label>
+                                    <input type="password" class="form-control mb-4" id="exampleInputPassword1" placeholder="Password">
+                                </div>
+                                <button type="submit" id="btnColor" class="mt-2 btn btn-block text-white">Log In</button>
+                            </form>
+                        </div>
+                        <span class="sr-only">(current)</span>
+                    </li>
+
+
+            </ul>
+        </div>
+    </nav>
+    <!-- <div class="container"> -->
+
     <div class="scenarioBG">
         <p id="textBG">Click the screen to begin the scenarios</p>
     </div>
 
     <!-- Optional JavaScript -->
-    <script src="./js/login.js"></script>
-    <script src="./js/news.js"></script>
-    <script src="./js/scenario.js" type="text/javascript"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./js/scenario.js"></script>
+
 </body>
 
 </html>
