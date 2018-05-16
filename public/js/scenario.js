@@ -3,17 +3,6 @@ var start_time = 0;
 var end_time = 0;
 var userID;
 
-// $(function () {
-//     $('[data-toggle="popover"]').popover()
-//   })
-
-// $(function () {
-//     $('#popUp').popover({
-//        "left": "30%"
-//     })
-//     $(this).css("left", "30%")
-//   })
-
     $('.modal').modal("show")
 
 $("#register").on("click", function () {
