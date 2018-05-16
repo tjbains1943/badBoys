@@ -13,4 +13,22 @@ module.exports = function (app) {
         });
     });
 
+    app.post("/user", function (req, res) {
+        db.Users.create(req.body).then(function (data) {
+            res.json(data);
+        });
+    });
+
+    app.get("/login", function (req, res) {
+        console.log(req.body);
+        db.Users.findOne({
+            where: {
+                userName: req.body.userName,
+                password: req.body.password
+            }
+        }).then(function (data) {
+            res.json(data);
+        });
+    });
+
 };

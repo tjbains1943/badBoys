@@ -2,41 +2,39 @@ var sessionStart = false;
 var start_time = 0;
 var end_time = 0;
 var userID;
-var displayDelay;
+var userName;
+var classID;
 var scenarioNum = 1;
 var backgroundNum = 2;
 
-// $(function () {
-//     $('[data-toggle="popover"]').popover()
-//   })
-
-// $(function () {
-//     $('#popUp').popover({
-//        "left": "30%"
-//     })
-//     $(this).css("left", "30%")
-//   })
-
-    $('.modal').modal("show")
-
-$("#register").on("click", function () {
+$("#register").on("click", function (event) {
+    event.preventDefault();
     var user = {
-        name: $("").val().trim(),
-        password: $("").val().trim()
+        userName: $("#registerUser").val().trim(),
+        password: $("#registerPassword").val().trim(),
+        classID: $("#registerClass").val().trim()
     }
-    $.post("/newUser", user).then(function (data) {
+    $.post("/user", user, ).then(function (data) {
+        userName = data.userName;
         userID = data.id;
+        classID = data.classID;
     });
 });
 
-$("#login").on("click", function () {
+$("#login").on("click", function (event) {
+    event.preventDefault();
     var user = {
-        name: $("").val().trim(),
-        password: $("").val().trim()
+        userName: $("#1").val().trim(),
+        password: $("#2").val().trim()
     }
+    console.log(user.userName);
+    console.log(user.password);
     $.get("/login", user).then(function (data) {
         if (data) {
+            console.log(data);
+            userName = data.userName;
             userID = data.id;
+            classID = data.classID;
         } else {
             alert("incorrect login");
         }
