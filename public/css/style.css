@@ -53,17 +53,22 @@ background: linear-gradient(to bottom right, rgb(7, 117, 190), rgb(56, 207, 245)
   }
 .scenarioBG{
     position: relative;
-    background-image: url("./../../images/scenarios/house/house.jpg");
+    background-image: url("../images/assets/back3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
     height: 100%;
 }
+#textBG{
+    position:absolute;
+    top: 60%;
+    left: 8%;
+    font-size: 36px;
+    color: ivory;
+}
 #img{
     position:absolute;
-    top: 50%;
-    left: 80%;
 }
 
 .dropdown-menu {
