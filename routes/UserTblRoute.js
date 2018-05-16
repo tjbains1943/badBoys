@@ -1,66 +1,47 @@
 var db = require("../models");
-/*
+
 module.exports = function (app) {
-    app.post("/api/statistics", function (req, res) {
+    app.get("/user/:id", function (req, res) {
 
-        db.User.create({ username: req.body }).then(function (dbUser) { res.json(dbUser) });
-    });
-
-    app.post("/api/login", function (req, res) { });
-
-    app.get("/api/scenarios", function (req, res) { });
-
-    app.post("/api/runtime", function (req, res) { });
-    app.get("/api/login", function (req, res) {
-        console.log("running");
-        res.json({ one: "1" });
-    });
-
-    app.get("/api/admin", function (req, res) { });
-
-    app.get("/api/runtime", function (req, res) { });
-};
-*/
-module.exports = function (app) {
-    app.get("/api/admin", function (req, res) {
-        // Here we add an "include" property to our options in our findAll query
-        // We set the value to an array of the models we want to include in a left outer join
-        // In this case, just db.Post
-        db.User.findAll({
-            include: [db.Scenarios]
-        }).then(function (dbUser) {
-            res.json(dbUser);
+        db.User.findOne({
+            where: {
+                id: req.params.id
+            }
+        }).then(function (data) {
+            res.json(data);
         });
     });
-    /*
-        app.get("/api/authors/:id", function (req, res) {
-            // Here we add an "include" property to our options in our findOne query
-            // We set the value to an array of the models we want to include in a left outer join
-            // In this case, just db.Post
-            db.Author.findOne({
+
+    // POST route for saving a new user
+    app.post("/user/stats", function (req, res) {
+        db.User.create(req.body).then(function (dbStats) {
+            res.json(dbStats);
+        });
+    });
+
+
+    // DELETE route for deleting user
+    app.delete("/user/stats", function (req, res) {
+        db.User.destroy({
+            where: {
+                id: req.body.id
+            }
+        }).then(function (dbStats) {
+            res.json(dbStats);
+        });
+    });
+
+
+    // PUT route for updating user
+    app.put("/user/stats", function (req, res) {
+        db.User.update(
+            req.body,
+            {
                 where: {
-                    id: req.params.id
-                },
-                include: [db.Post]
-            }).then(function (dbAuthor) {
-                res.json(dbAuthor);
-            });
-        });
-    
-        app.post("/api/authors", function (req, res) {
-            db.Author.create(req.body).then(function (dbAuthor) {
-                res.json(dbAuthor);
-            });
-        });
-    
-        app.delete("/api/authors/:id", function (req, res) {
-            db.Author.destroy({
-                where: {
-                    id: req.params.id
+                    id: req.body.id
                 }
-            }).then(function (dbAuthor) {
-                res.json(dbAuthor);
+            }).then(function (dbStats) {
+                res.json(dbStats);
             });
-        });
-    */
+    });
 };
