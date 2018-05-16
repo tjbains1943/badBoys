@@ -18,7 +18,40 @@
 
 <body>
 
+<!-- Button trigger modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" id="davisImg">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Register New User</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body border-0">
+            <form class="border-0" >
+                <div class="form-group">
+                  <label for="exampleInputEmail1" class="">Username</label>
+                  <input type="email" class="form-control w-75" aria-describedby="emailHelp" placeholder="Enter username">
 
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1" class="">Password</label>
+                  <input type="password" class="form-control w-75 mb-4"  placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class=""><strong> Class ID</strong></label>
+                    <input type="password" class="form-control mb-4 w-100" placeholder="Enter Class ID from instructor here">
+                  </div>
+                <button type="submit" class=" mt-2 btn btn-dark btn-block text-white">Log In</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
     <nav class="navbar navbar-expand-lg bg-none text-primary" id="gradient">
         <a class="navbar-brand navbar-right pr-4 text-white" href="#">
             <strong> Officer Involved Scenarios</strong>
@@ -113,8 +146,6 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <script src="./js/login.js"></script>
-    <script src="./js/news.js"></script>
     <script src="./js/scenario.js"></script>
     <script>
         function displayScenario(image) {

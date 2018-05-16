@@ -17,6 +17,13 @@ html, body {
     height: 50%;
     margin-top: 10%;
 }
+#davisImg {
+    background-image: url("./../../images/assets/davis.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
 #mainImg {
     background-image: url("./../../images/assets/back3.jpg");
     background-size: cover;

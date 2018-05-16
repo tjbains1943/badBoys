@@ -26,9 +26,8 @@ newsapi.v2.topHeadlines({
 };
 
 request(`https://api.usa.gov/crime/fbi/ucr/estimates/national?page=1&per_page=10&output=json&api_key=${fbiKey}`, function (error, response, body) {
-  console.log('error:', error); // Print the error if one occurred
-  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-  console.log('body:', JSON.parse(body)); // Print the HTML for the Google homepage.
+  // console.log('error:', error); // Print the error if one occurred
+  // console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+  // console.log('body:', JSON.parse(body)); // Print the HTML for the Google homepage.
 });
   
-console.log(process.env.News_Key + "3")

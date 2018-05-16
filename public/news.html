@@ -1,140 +1,148 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>News</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<head>
+  <title>News</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="./css/style.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./css/style.css">
 
 </head>
-  <body id="navy">
-      <nav class="navbar navbar-expand-lg bg-none text-primary" id="gradient">
-          <a class="navbar-brand navbar-right pr-4 text-white" href="#">
-            <strong> Officer Involved Scenarios</strong>
+
+<body id="navy">
+  <nav class="navbar navbar-expand-lg bg-none text-primary" id="gradient">
+    <a class="navbar-brand navbar-right pr-4 text-white" href="#">
+      <strong> Officer Involved Scenarios</strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="/">Home
+            <span class="sr-only">(current)</span>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link text-white" href="/">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-                <li class="nav-item active">
-                  <a class="nav-link text-white">|
-                    <span class="sr-only">(current)</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="/scenario">Scenarios</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link text-white">|
-                    <span class="sr-only">(current)</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="/news.html">In the News</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link text-white">|
-                    <span class="sr-only">(current)</span>
-                  </a>
-                  
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="./crime.html">FBI Crime Statistics</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link text-white">|
-                    <span class="sr-only">(current)</span>
-                  </a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Login</a>
-                  <div class="dropdown-menu">
-                    <form class="my-2 p-3 col-md-6" id="mxWidth">
-                      <div class="form-group">
-                        <h5 id="emailHelp" style="display: inline;" class="form-text text-white mb-5">Log in or</h5>
-                        <a class="nav-link text-white" style="display: inline;" href="/scenario">
-                          <u> Create New Account</u>
-                        </a>
-                        <i id="xbtn" class="float-right fas fa-times"></i>
-                        <h5 id="emailHelp" class="form-text text-white mb-5"></h5>
-                        <label for="exampleInputEmail1" class="text-white">Username</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
-    
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputPassword1" class="text-white">Password</label>
-                        <input type="password" class="form-control mb-4" id="exampleInputPassword1" placeholder="Password">
-                      </div>
-                      <button type="submit" id="btnColor" class="mt-2 btn btn-block text-white">Log In</button>
-                    </form>
-                  </div>
-                  <span class="sr-only">(current)</span>
-                </li>
-    
-    
-            </ul>
-          </div>
-        </nav>
-    <h1 class="text-white text-center my-2">Headlines of the Day</h1>
+          <li class="nav-item active">
+            <a class="nav-link text-white">|
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/scenario">Scenarios</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-white">|
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/news.html">In the News</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-white">|
+              <span class="sr-only">(current)</span>
+            </a>
 
-<div class="grid text-white">
-  <div class="grid-sizer">  </div>
-  <div class="grid-item grid-item--height4">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="./crime.html">FBI Crime Statistics</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-white">|
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Login</a>
+            <div class="dropdown-menu">
+              <form class="my-2 p-3 col-md-6" id="mxWidth">
+                <div class="form-group">
+                  <h5 id="emailHelp" style="display: inline;" class="form-text text-white mb-5">Log in or</h5>
+                  <a class="nav-link text-white" style="display: inline;" href="/scenario">
+                    <u> Create New Account</u>
+                  </a>
+                  <i id="xbtn" class="float-right fas fa-times"></i>
+                  <h5 id="emailHelp" class="form-text text-white mb-5"></h5>
+                  <label for="exampleInputEmail1" class="text-white">Username</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1" class="text-white">Password</label>
+                  <input type="password" class="form-control mb-4" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <button type="submit" id="btnColor" class="mt-2 btn btn-block text-white">Log In</button>
+              </form>
+            </div>
+            <span class="sr-only">(current)</span>
+          </li>
+
+
+      </ul>
+    </div>
+  </nav>
+  <h1 class="text-white text-center my-2">Headlines of the Day</h1>
+
+  <div class="grid text-white">
+    <div class="grid-sizer"> </div>
+    <div class="grid-item grid-item--height4">
+    </div>
+    <div class="grid-item grid-item--width2 grid-item--height2 text-white"></div>
+    <div class="grid-item grid-item--height3"></div>
+    <div class="grid-item grid-item--height2"></div>
+    <div class="grid-item grid-item--width3"></div>
+    <div class="grid-item grid-item--height3"></div>
+    <div class="grid-item grid-item--height4"></div>
+    <div class="grid-item grid-item--height2"></div>
+    <div class="grid-item grid-item--width2 grid-item--height3"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item grid-item--height2"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item grid-item--width2 grid-item--height2"></div>
+    <div class="grid-item grid-item--width2"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item grid-item--height2"></div>
+    <div class="grid-item grid-item--height3"></div>
+    <div class="grid-item grid-item--height4"></div>
+    <div class="grid-item grid-item--height3"></div>
+    <div class="grid-item grid-item--height2"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item grid-item--height2"></div>
   </div>
-  <div class="grid-item grid-item--width2 grid-item--height2 text-white"></div>
-  <div class="grid-item grid-item--height3"></div>
-  <div class="grid-item grid-item--height2"></div>
-  <div class="grid-item grid-item--width3"></div>
-  <div class="grid-item grid-item--height3"></div>
-  <div class="grid-item grid-item--height4"></div>
-  <div class="grid-item grid-item--height2"></div>
-  <div class="grid-item grid-item--width2 grid-item--height3"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item grid-item--height2"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item grid-item--width2 grid-item--height2"></div>
-  <div class="grid-item grid-item--width2"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item grid-item--height2"></div>
-  <div class="grid-item grid-item--height3"></div>
-  <div class="grid-item grid-item--height4"></div>
-  <div class="grid-item grid-item--height3"></div>
-  <div class="grid-item grid-item--height2"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item grid-item--height2"></div>
-</div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script> src="./../routes/api-routes.js"</script>
-    <!-- <script src="https://code.jquery.com/jquery-3.0.0.js"></script> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-<script>
-   $('.grid').masonry({
-  itemSelector: '.grid-item',
-  columnWidth: '.grid-sizer',
-  percentPosition: true
-});
-</script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- <script src="./js/news.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script> src = "./../routes/api-routes.js"</script>
+  <!-- <script src="https://code.jquery.com/jquery-3.0.0.js"></script> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script>
+    $('.grid').masonry({
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+    });
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/news.js"></script>
 
 </body>
+
 </html>
