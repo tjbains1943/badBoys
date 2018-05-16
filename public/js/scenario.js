@@ -7,8 +7,14 @@ var classID;
 var scenarioNum = 1;
 var backgroundNum = 2;
 
+<<<<<<< HEAD
 $("#register").on("click", function (event) {
     event.preventDefault();
+=======
+    $('.modal').modal("show")
+
+$("#register").on("click", function () {
+>>>>>>> 437b2626a606b86484e6bf4827ae7fb19ce75703
     var user = {
         userName: $("#registerUser").val().trim(),
         password: $("#registerPassword").val().trim(),
