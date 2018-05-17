@@ -53,7 +53,7 @@ background: linear-gradient(to bottom right, rgb(7, 117, 190), rgb(56, 207, 245)
   }
 .scenarioBG{
     position: relative;
-    background-image: url("../images/assets/back3.jpg");
+    background-image: url("../images/assets/admin3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -93,18 +93,6 @@ background: linear-gradient(to bottom right, rgb(7, 117, 190), rgb(56, 207, 245)
 img {
     width: 100%;
 }
-.effect2 {
-    z-index:9999;
-    height: 247px;
-    background: black;
-    -webkit-box-shadow: 7px 7px 2px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow: 7px 7px 2px 0px rgba(50, 50, 50, 0.75);
-    box-shadow: 7px 7px 2px 0px rgba(50, 50, 50, 0.75);
-}
-.drop-shadow{
-    box-shadow: 0px 7px 5px #888888;
-    z-index:999;
-}
 
 .shadow-lg {	box-shadow:
   0 15px 30px 0 rgba(0,0,0,0.11),
@@ -119,12 +107,32 @@ img {
 #headline {
     margin-top: 40%;
     color: ivory;
+    font-family: 'Cinzel', serif;
 }
 
 i { 
     font-style: italic;
 }
 
+.text {
+    font-family: 'Ultra';
+    font-size: 170%;
+}
+
+.sister {
+    font-family: 'Arbutus Slab', serif;
+    /* font-size: 100%; */
+}
+
+.sister2 {
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 125%;   
+}
+
+.sister3 {
+    font-family: 'Oswald', sans-serif;
+
+}
 .grid {
     background: navy;
     max-width: 1300px;
@@ -167,3 +175,24 @@ i {
     font-family: sans-serif;
      box-sizing: border-box; 
   }
+
+
+/* #carousel {
+    max-width: 100%;
+    max-height: 100%;
+} */
+    
+#start {
+    position: relative;
+    top: 15%;
+    left: 60%;
+    
+    background:white; -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px; width:20%; height:20%;
+}
+
+#pointer{
+    top: 35%;
+    left: 60%;
+    border:solid 10px transparent;border-right-color:#fff;position:absolute;margin:-85px 0 0 -20px;}

@@ -8,6 +8,7 @@ module.exports = function(app) {
   app.get("/api/news", function(req, res) {
 newsapi.v2.topHeadlines({
   sources: '',
+  language: 'en',
   q: 'police'
 }).then(response => {
   // console.log(response);
