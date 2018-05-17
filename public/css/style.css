@@ -117,13 +117,27 @@ img {
 }
 
 #headline {
-    margin-top: 20%;
+    margin-top: 30%;
+    color: rgba(229, 230, 236, 0.705);
+    font-family: 'Cinzel', serif;
 }
 
+.cinzel {
+    font-family: 'Cinzel', serif;
+}
 i { 
     font-style: italic;
 }
 
+.text {
+    font-family: 'Ultra', serif;
+    font-size: 170%;
+}
+
+.sister {
+    font-family: 'Love Ya Like A Sister', cursive;
+
+}
 .grid {
     background: navy;
     max-width: 1300px;
