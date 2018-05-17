@@ -1,9 +1,3 @@
-// *****************************************************************************
-// Server.js - This file is the initial starting point for the Node/Express server.
-//
-// ******************************************************************************
-// *** Dependencies
-// =============================================================
 require('dotenv').config()
 var express = require("express");
 var bodyParser = require("body-parser");
@@ -33,7 +27,7 @@ require("./routes/table-api-routes.js")(app);
 // =============================================================
 db.sequelize.sync({
   force: true,
-  logging: console.log
+  // logging: console.log
 }).then(function () {
 
   db.Scenarios.bulkCreate([

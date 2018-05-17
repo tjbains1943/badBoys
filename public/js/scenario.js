@@ -47,6 +47,7 @@ $("#login").on("click", function (event) {
 
 $("#start").on("click", function (event) {
     $("#start").hide();
+    $("#pointer").hide();
     console.log("session started");
     sessionStart = true;
     event.preventDefault();

@@ -53,7 +53,7 @@ background: linear-gradient(to bottom right, rgb(7, 117, 190), rgb(56, 207, 245)
   }
 .scenarioBG{
     position: relative;
-    background-image: url("../images/assets/back3.jpg");
+    background-image: url("../images/assets/admin3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -166,3 +166,24 @@ i {
     font-family: sans-serif;
      box-sizing: border-box; 
   }
+
+
+/* #carousel {
+    max-width: 100%;
+    max-height: 100%;
+} */
+    
+#start {
+    position: relative;
+    top: 15%;
+    left: 60%;
+    
+    background:white; -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px; width:20%; height:20%;
+}
+
+#pointer{
+    top: 35%;
+    left: 60%;
+    border:solid 10px transparent;border-right-color:#fff;position:absolute;margin:-85px 0 0 -20px;}

@@ -1,6 +1,6 @@
 $("#login").on("click", function(event) {
     event.preventDefault();
-    console.log(3);
+    // console.log(3);
 
 })
 
