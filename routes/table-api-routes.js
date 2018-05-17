@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function (app) {
 
     app.get("/scenarios/:id", function (req, res) {
-        console.log("lkjljkljljlkjlkjlkjlkjlkj")
+
         db.Scenarios.findOne({
             where: {
                 id: req.params.id
@@ -14,14 +14,14 @@ module.exports = function (app) {
     });
 
     app.post("/user", function (req, res) {
-        console.log(req.body)
+
         db.Users.create(req.body).then(function (data) {
             res.json(data);
         });
     });
 
     app.post("/login", function (req, res) {
-        console.log(req.body);
+
         db.Users.findOne({
             where: {
                 userName: req.body.userName,
@@ -34,6 +34,20 @@ module.exports = function (app) {
 
     app.post("/stats", function (req, res) {
         db.ScenarioStats.create(req.body).then(function (data) {
+            res.json(data);
+        });
+    });
+
+    app.get("/stats/:search", function (req, res) {
+
+        db.Users.findAll({
+            where: {
+                userName: req.params.search
+            },
+            include: [{
+                model: db.ScenarioStats
+            }]
+        }).then(function (data) {
             res.json(data);
         });
     });
