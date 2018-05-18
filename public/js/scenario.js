@@ -62,17 +62,20 @@ $("#register").on("click", function (event) {
         classID: $("#registerClass").val().trim()
     }
     $.post("/user", user).then(function (data) {
+        console.log(data);
+        console.log(data.id);
         userName = data.userName;
         userID = data.id;
         classID = data.classID;
+        console.log(userID);
     });
 });
 
 $("#login").on("click", function (event) {
     event.preventDefault();
     var user = {
-        userName: $("#1").val().trim(),
-        password: $("#2").val().trim()
+        userName: $("#loginName").val().trim(),
+        password: $("#loginPassword").val().trim()
     }
     console.log(user.userName);
     console.log(user.password);
@@ -92,6 +95,7 @@ $("#start").on("click", function (event) {
     $("#start").hide();
     $("#pointer").hide();
     console.log("session started");
+    console.log(userID);
     sessionStart = true;
     event.preventDefault();
 

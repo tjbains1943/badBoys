@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link rel="stylesheet" href="./css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture" rel="stylesheet">
 
@@ -26,45 +26,9 @@
 
 <body>
 
-    <!-- Button trigger modal -->
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content" id="davisImg">
-                <div class="modal-header border-0">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Register New User</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body border-0">
-                    <form class="border-0">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1" class="">Username</label>
-                            <input id="registerUser" class="form-control w-75" aria-describedby="emailHelp" placeholder="Enter username">
-
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1" class="">Password</label>
-                            <input id="registerPassword" type="password" class="form-control w-75 mb-4" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1" class="">
-                                <strong> Class ID</strong>
-                            </label>
-                            <input id="registerClass" class="form-control mb-4 w-100" placeholder="Enter Class ID from instructor here">
-                        </div>
-                        <button id="register" type="submit" class=" mt-2 btn btn-dark btn-block text-white">Log In</button>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
-        </div>
-    </div>
     <nav class="navbar navbar-expand-lg bg-none text-primary" id="gradient">
-        <a class="text navbar-brand navbar-right pr-4 text-white" href="#">
-            <strong>Shots Fired</strong>
+        <a class="text navbar-brand navbar-right pr-5 text-white" href="/" disabled>
+            <strong> Shots Fired</strong>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -73,14 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link text-white" href="/">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                    <li class="nav-item active">
-                        <a class="nav-link text-white">|
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link text-white" href="/scenario">Scenarios</a>
                     </li>
@@ -101,54 +58,58 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="./crime.html">Statistics</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link text-white">|
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Login</a>
-                        <div class="dropdown-menu">
-                            <form class="my-2 p-3 col-md-6" id="mxWidth">
-                                <div class="form-group">
-                                    <h5 id="emailHelp" style="display: inline;" class="form-text text-white mb-5">Log in or</h5>
-                                    <a class="nav-link text-white" style="display: inline;" href="/scenario">
-                                        <u> Create New Account</u>
-                                    </a>
-                                    <i id="xbtn" class="float-right fas fa-times"></i>
-                                    <h5 id="emailHelp" class="form-text text-white mb-5"></h5>
-                                    <label for="exampleInputEmail1" class="text-white">Username</label>
-                                    <input id="1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
-
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1" class="text-white">Password</label>
-                                    <input id="2" type="password" class="form-control mb-4" id="exampleInputPassword1" placeholder="Password">
-                                </div>
-                                <button id="login" type="submit" id="btnColor" class="mt-2 btn btn-block text-white">Log In</button>
-                            </form>
-                        </div>
-                        <span class="sr-only">(current)</span>
-                    </li>
-
-
             </ul>
+
+            <form class="navbar-nav form-inline ml-auto my-lg-0">
+                <input id="loginName" class="form-control mr-sm-2" type="search" placeholder="Username" aria-label="Search">
+                <input id="loginPassword" class="form-control mr-sm-2 " type="search" placeholder="Password" aria-label="Search">
+                <button id="login" class="btn btn-outline-light my-2 my-sm-0 " type="submit">Login</button>
+            </form>
+
+            <div class="navbar-nav form-inline ml-auto dropdown">
+                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Register
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <h3 class="ml-5">Register New User</h3>
+                        <br>
+                    </li>
+                    <li>
+                        <input id="registerUser" class="form-control ml-5 " type="search" placeholder="Username" aria-label="Search">
+                    </li>
+                    <br>
+                    <li>
+                        <input id="registerPassword" class="form-control ml-5 " type="search" placeholder="Password" aria-label="Search">
+                    </li>
+                    <br>
+                    <li>
+                        <input id="registerClass" class="form-control ml-5 " type="search" placeholder="Class ID" aria-label="Search">
+                    </li>
+                    <br>
+                    <button id="register" type="submit" class="btn btn-outline-light ml-5 ">Register</button>
+                </ul>
+            </div>
+
         </div>
     </nav>
     <!-- <div class="container"> -->
 
     <div class="scenarioBG">
-        <button id="start" class="btn text-dark sister2">Want to Play a Game?<br> Click Here!</button>
+        <button id="start" class="btn text-dark sister2">Want to Play a Game?
+            <br> Click Here!</button>
         <div id="pointer"></div>
     </div>
-  
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
     <script>
-    
+
     // $('.modal').modal("show")</script>
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="./js/scenario.js"></script>
 

@@ -3,11 +3,6 @@ var db = require("../models");
 module.exports = function (app) {
 
     app.get("/scenarios/:id", function (req, res) {
-<<<<<<< HEAD
-
-=======
-        // console.log("lkjljkljljlkjlkjlkjlkjlkj")
->>>>>>> b92b4562f21f1e9bfe0d94cbc009fe788ecc556f
         db.Scenarios.findOne({
             where: {
                 id: req.params.id
@@ -18,22 +13,12 @@ module.exports = function (app) {
     });
 
     app.post("/user", function (req, res) {
-<<<<<<< HEAD
-
-=======
-        // console.log(req.body)
->>>>>>> b92b4562f21f1e9bfe0d94cbc009fe788ecc556f
         db.Users.create(req.body).then(function (data) {
             res.json(data);
         });
     });
 
     app.post("/login", function (req, res) {
-<<<<<<< HEAD
-
-=======
-        // console.log(req.body);
->>>>>>> b92b4562f21f1e9bfe0d94cbc009fe788ecc556f
         db.Users.findOne({
             where: {
                 userName: req.body.userName,
