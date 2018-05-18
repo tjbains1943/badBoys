@@ -49,4 +49,18 @@ module.exports = function (app) {
         });
     });
 
+    app.get("/statss/:class", function (req, res) {
+
+        db.Users.findAll({
+            where: {
+                ClassID: req.params.class
+            },
+            include: [{
+                model: db.ScenarioStats
+            }]
+        }).then(function (data) {
+            res.json(data);
+        });
+    });
+
 };
