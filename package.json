@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "9.3.0"
+  },
   "directories": {
     "test": "test"
   },
