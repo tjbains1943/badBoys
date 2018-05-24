@@ -54,6 +54,43 @@ $("#statsBtn").on("click", function (event) {
     });
 });
 
+$("#classBtn").on("click", function (event) {
+    event.preventDefault();
+    $("#statCon").empty();
+    var search = $("#statsClass").val().trim();
+
+    $.get("/statss/" + search, function (data) {
+        console.log(data);
+        for (let i = 0; i < data.length; i++) {
+            var statCard = $("<div>");
+            var user = $("<div>");
+            user.text(data[i].userName + ":");
+            statCard.append(user);
+            var stats = $("<div>");
+            for (let j = 0; j < data[i].ScenarioStats.length; j++) {
+                var row = $("<div>");
+                var title = $("<span>");
+                title.text("Title: " + data[i].ScenarioStats[j].title + " | ");
+                var shot = $("<span>");
+                shot.text("Shot: " + data[i].ScenarioStats[j].shot + " | ");
+                var time = $("<span>");
+                time.text("Time: " + data[i].ScenarioStats[j].time + " | ");
+                var armed = $("<span>");
+                armed.text("Armed: " + data[i].ScenarioStats[j].armedWith);
+
+                row.append(title);
+                row.append(shot);
+                row.append(time);
+                row.append(armed);
+
+                stats.append(row);
+            }
+            statCard.append(stats);
+            $("#statCon").append(statCard);
+        }
+    });
+});
+
 $("#register").on("click", function (event) {
     event.preventDefault();
     var user = {
