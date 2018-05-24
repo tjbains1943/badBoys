@@ -4,7 +4,6 @@
     "password": "root",
     "database": "badboys",
     "host": "localhost",
-    "dialect": "mysql",
-    "port": 8889
+    "dialect": "mysql"
   }
 }
