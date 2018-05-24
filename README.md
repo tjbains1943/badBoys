@@ -1,6 +1,6 @@
 # badBoys
 
-# Techonologies used
+# Technologies Used
 HTML, CSS, JavaScript, Nodejs, Heroku,Yarn, NPM, NPM-packages include bcrypt, body-parser, dotenv, express, mysql, mysql2, newsapi, request, sequelize. 
 
 # About
